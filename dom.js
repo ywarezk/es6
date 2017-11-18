@@ -40,3 +40,7 @@ const newDiv = document.createElement('div');
 const childNode = document.createTextNode('hello dynamicly created text');
 newDiv.appendChild(childNode);
 document.body.appendChild(newDiv);
+newDiv.addEventListener('click', () => {
+    alert('you just clicked me');
+});
+

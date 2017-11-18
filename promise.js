@@ -54,3 +54,32 @@ const promiseChainingExample = new Promise((resolve, reject) => {
 
 });
 
+// common use case converting json response to class
+
+class Person{
+    constructor(json) {
+        this.firstName = json.firstName || '';
+        this.lastName = json.lastName || '';
+    }
+
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+const promiseChainingClass = new Promise((resolve, reject) => {
+    // server will return  a json after 4 seconds
+    setTimeout(() => {
+        resolve({
+            firstName: 'Slim',
+            lastName: 'Shady'
+        });
+    }, 4000);
+}).then(function resolve(json){
+    return new Person(json);
+}).then(function resolve(person){
+    console.log(`hi my name is: ${person.fullName}`);
+});
+
+// all
+

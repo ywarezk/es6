@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch/XMLHttpRequest</title>
+</head>
+<body>
+    <h1>
+        XMLHttpRequest - get tasks
+    </h1>
+    <div>
+        <ul id="container1">
+
+        </ul>
+    </div>
+    <h1>
+        Fetch - get tasks
+    </h1>
+    <div>
+        <ul id="container2">
+
+        </ul>
+    </div>
+    <div id="container3">
+        <h1>
+            Get a single task
+        </h1>
+    </div>
+
+    <div>
+        <h1>
+            Create New Task
+        </h1>
+        <form onsubmit="createTask(event);">
+            <div>
+                <label>
+                    Title
+                </label>
+                <input type="text" name="title" id="title" />
+            </div>
+            <div>
+                <label>
+                    Description
+                </label>
+                <textarea name="description" id="description"></textarea>
+            </div>
+            <div>
+                <label>Date</label>
+                <input type="date" name="when" id="when" />
+            </div>
+            <div>
+                <label>
+                    Group
+                </label>
+                <input type="text" name="group" id="group" />
+            </div>
+            <div>
+                <button type="submit">Create</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="fetch.js"></script>
+</body>
+</html>

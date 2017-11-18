@@ -17,6 +17,17 @@
         get elements by class name return multiple elements
     </p>
 
+
+    <script>
+        function test(event){
+            event.preventDefault();
+            event.stopPropagation();
+        }
+    </script>
+    <form onsubmit="test(event);">
+        <input type="hidden" name="foo" value="bar" />
+        <button type="submit"></button>
+    </form>
     <script src="dom.js"></script>
 </body>
 </html>
